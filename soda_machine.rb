@@ -13,11 +13,7 @@ class SodaMachine
   end
 
   def find_soda(soda_brand)
-    @sodas.each do |soda|
-      if soda.brand == soda_brand
-        return soda
-      end
-    end
+    @sodas.each { |soda| return soda if soda.brand == soda_brand }
     nil
   end
 
